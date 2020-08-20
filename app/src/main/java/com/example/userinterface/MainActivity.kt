@@ -1,5 +1,6 @@
 package com.example.userinterface
 
+import android.graphics.Color
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val view = TextView(this)
         view.text = lebel
         view.textSize = 28f
+        view.setTextColor(Color.parseColor("#ff0000"))
         linearLayout.addView(view)
     }
 }
