@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -18,19 +19,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        //Call the function to create a TextView
-        addTextView("Hello")
-        addTextView("From")
-        addTextView("Mithu")
+        button.setOnClickListener{
+            val userName = nameInput.text.toString()
+            val password = passwordInput.text.toString()
+            Toast.makeText(this,
+            "Name: $userName, Password: $password", Toast.LENGTH_LONG)
+                .show()
+        }
+
+
 
     }
 
-    //Create a function to create a TextView through code
-    private fun addTextView(lebel : String){
-        val view = TextView(this)
-        view.text = lebel
-        view.textSize = 28f
-        view.setTextColor(Color.parseColor("#ff0000"))
-        linearLayout.addView(view)
-    }
 }
