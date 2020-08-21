@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/monster_btn</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,7 +17,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="monster_btn">
+    <style name="monster_btn" parent="@android:style/Widget.Button">
         <item name="android:drawableLeft">@drawable/ic_monster</item>
         <item name="android:backgroundTint">@color/colorAccent</item>
         <item name="android:textColor">@android:color/white</item>
