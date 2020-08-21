@@ -15,4 +15,6 @@
     <string name="nameHint">Name</string>
     <string name="password">Password</string>
     <string name="click_me_btn">Click_me</string>
+
+    <string name="loginMessage">Name: %s, Password: %s</string>
 </resources>
