@@ -1,6 +1,7 @@
 package com.example.userinterface
 
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -20,24 +21,34 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         button1.setOnClickListener {
-            displayImageResources(R.drawable.monster01)
+
+            displayImageAsset("monster01.webp")
         }
 
         button2.setOnClickListener {
-            displayImageResources(R.drawable.monster02)
+
+            displayImageAsset("monster02.webp")
         }
 
         button3.setOnClickListener {
-            displayImageResources(R.drawable.monster03)
+
+            displayImageAsset("monster03.webp")
         }
 
 
     }
 
-    private fun displayImageResources(resId: Int) {
+    /*private fun displayImageResources(resId: Int) {
 
         monsterImage.setImageResource(resId)
 
+    }*/
+
+    private fun displayImageAsset(fileName : String){
+        assets.open(fileName).use {
+            val drawable = Drawable.createFromStream(it, null)
+            monsterImage.setImageDrawable(drawable)
+        }
     }
 
 
