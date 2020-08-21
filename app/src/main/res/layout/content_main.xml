@@ -32,7 +32,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/monster_btn" />
 
     <Button
         android:id="@+id/button2"
@@ -42,7 +43,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/button1"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        android:drawableLeft="@drawable/ic_monster"
+        style="@style/monster_btn"/>
 
     <Button
         android:id="@+id/button3"
@@ -53,6 +56,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        android:drawableLeft="@drawable/ic_monster"
+        style="@style/monster_btn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
